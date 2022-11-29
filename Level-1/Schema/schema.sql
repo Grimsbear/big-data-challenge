@@ -5,19 +5,16 @@ CREATE TABLE review_id_table (
   product_parent INTEGER,
   review_date DATE -- this should be in the formate yyyy-mm-dd
 );
-
 -- This table will contain only unique values
 CREATE TABLE products (
-  product_id TEXT PRIMARY KEY NOT NULL UNIQUE,
+  product_id TEXT PRIMARY KEY NOT NULL,
   product_title TEXT
 );
-
 -- Customer table for first data set
 CREATE TABLE customers (
-  customer_id INT PRIMARY KEY NOT NULL UNIQUE,
+  customer_id INT PRIMARY KEY NOT NULL,
   customer_count INT
 );
-
 -- vine table
 CREATE TABLE vine_table (
   review_id TEXT PRIMARY KEY,
@@ -26,3 +23,8 @@ CREATE TABLE vine_table (
   total_votes INTEGER,
   vine TEXT
 );
+
+select * from customers;
+select * from products;
+select * from review_id_table;
+select * from vine_table;
